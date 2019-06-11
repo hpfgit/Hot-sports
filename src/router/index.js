@@ -9,15 +9,16 @@ let routes = [
     {
         path: '/layout',
         component: () => import('@/layout/index'),
-        redirect: '/home',
         children: [
             {
                 path: '/home',
+                name: "Home",
                 component: () => import('@/views/home/index')
             },
             {
-                path: '/histoty',
-                component: () => import('@/views/histoty/index')
+                path: '/history',
+                name: 'History',
+                component: () => import('@/views/history/index')
             }
         ]
     }

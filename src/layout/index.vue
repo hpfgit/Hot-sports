@@ -29,13 +29,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .layout {
+        height: 100%;
+    }
+    .main {
+        height: calc(100% - 121px);
+    }
     .slider_box {
         width: 220px;
         background: #fff;
-        height: 500px;
+        height: 100%;
     }
     .centent {
         width: calc(100% - 220px);
+        min-height: 100%;
     }
 </style>
 

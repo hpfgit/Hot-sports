@@ -22,13 +22,13 @@
                     <p class="color_name">C77124烟台YQ仓现货</p>
                 </el-col>
                 <el-col :sm="3">
-                    <p class="prot">5</p>
+                    <p class="prot" @click="look_shop">5</p>
                 </el-col>
                 <el-col :sm="4">
-                    <p class="look_info">查看详细</p>
+                    <p class="look_info" @click="look_info">查看详细</p>
                 </el-col>
                 <el-col :sm="3">
-                    <p class="setting">编辑</p>
+                    <p class="setting" @click="setting">编辑</p>
                 </el-col>
             </el-row>
         </div>
@@ -36,7 +36,26 @@
 </template>
 <script>
 export default {
-   
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        // 查看在售端口
+        look_shop(e) {
+            console.log("look_shop")
+        },
+        look_info(e) {
+            console.log("look_info")
+        },
+        setting(e) {
+            console.log("setting")
+        }
+    },
+    created() {
+
+    }
 }
 </script>
 <style lang="scss" scoped>
