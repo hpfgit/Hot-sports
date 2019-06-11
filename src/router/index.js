@@ -14,6 +14,10 @@ let routes = [
             {
                 path: '/home',
                 component: () => import('@/views/home/index')
+            },
+            {
+                path: '/histoty',
+                component: () => import('@/views/histoty/index')
             }
         ]
     }

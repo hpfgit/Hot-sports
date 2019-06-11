@@ -2,7 +2,7 @@
   <div class="silder">
     <ul ref="silder_ul">
       <li :class="{'active': (num === 0 && active === true)}">
-        <a href="#">
+        <router-link to="/home">
           <img :src="require('@/assets/images/icon.png')" alt v-if="(num !== 0 && active === true)">
           <img
             :src="require('@/assets/images/icon-active.png')"
@@ -10,7 +10,7 @@
             v-if="(num === 0 && active === true)"
           >
           <span>我的商品</span>
-        </a>
+        </router-link>
         <img
           :src="require('@/assets/images/icon-active-right.png')"
           alt
@@ -19,7 +19,7 @@
         >
       </li>
       <li :class="{'active': (num === 1 && active === true)}">
-        <a href="#">
+        <router-link to="/history">
           <img
             :src="require('@/assets/images/icon2.png')"
             alt
@@ -31,7 +31,7 @@
             v-if="(num === 1 && active === true)"
           >
           <span>价格变更记录</span>
-        </a>
+        </router-link>
         <img
           :src="require('@/assets/images/icon-active-right.png')"
           alt
