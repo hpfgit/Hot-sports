@@ -2,7 +2,9 @@
     <div class="layout">
         <page-header></page-header>
         <div class="main clearfix">
-            <div class="slider_box fl"></div>
+            <div class="slider_box fl">
+                <Slider></Slider>
+            </div>
             <div class="centent fl">
                 <router-view></router-view>
             </div>
@@ -10,16 +12,18 @@
     </div>
 </template>
 <script>
-import pageHeader from '@/components/header'
+import pageHeader from "@/components/header";
+import Slider from "@/components/silder";
 
 export default {
-     data() {
+    data() {
         return {
 
         }
     },
     components: {
         pageHeader,
+        Slider
     }
 }
 </script>
