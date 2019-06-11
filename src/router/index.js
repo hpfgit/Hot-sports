@@ -17,7 +17,10 @@ let routes = [
             },
             {
                 path: '/history',
+<<<<<<< HEAD
                 name: 'History',
+=======
+>>>>>>> 6575fedb932d8a6dfec6311332e452d93681ce34
                 component: () => import('@/views/history/index')
             }
         ]

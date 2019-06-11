@@ -1,13 +1,13 @@
 <template>
   <div class="silder">
     <ul ref="silder_ul">
-      <li :class="{'active': (num === 0 && active === true)}">
+      <li :class="{'active': (num == 0 && active == true)}">
         <router-link to="/home">
-          <img :src="require('@/assets/images/icon.png')" alt v-if="(num !== 0 && active === true)">
+          <img :src="require('@/assets/images/icon.png')" alt v-if="(num != 0 && active == true)">
           <img
             :src="require('@/assets/images/icon-active.png')"
             alt
-            v-if="(num === 0 && active === true)"
+            v-if="(num == 0 && active == true)"
           >
           <span>我的商品</span>
         </router-link>
@@ -15,20 +15,20 @@
           :src="require('@/assets/images/icon-active-right.png')"
           alt
           class="active-img"
-          v-if="(num === 0 && active === true)"
+          v-if="(num == 0 && active == true)"
         >
       </li>
-      <li :class="{'active': (num === 1 && active === true)}">
+      <li :class="{'active': (num == 1 && active == true)}">
         <router-link to="/history">
           <img
             :src="require('@/assets/images/icon2.png')"
             alt
-            v-if="(num !== 1 && active === true)"
+            v-if="(num != 1 && active == true)"
           >
           <img
             :src="require('@/assets/images/icon2-active.png')"
             alt
-            v-if="(num === 1 && active === true)"
+            v-if="(num == 1 && active == true)"
           >
           <span>价格变更记录</span>
         </router-link>
@@ -36,7 +36,7 @@
           :src="require('@/assets/images/icon-active-right.png')"
           alt
           class="active-img"
-          v-if="(num === 1 && active === true)"
+          v-if="(num == 1 && active == true)"
         >
       </li>
     </ul>
@@ -49,7 +49,7 @@ export default {
   name: "slider",
   data() {
     return {
-      num: 0,
+      num: window.localStorage.getItem('currentIndex') || 0,
       active: true
     };
   },
@@ -63,6 +63,8 @@ export default {
         item.num = num;
         addHandler(item, "click", function() {
           self.num = this.num;
+          window.localStorage.clear();
+          window.localStorage.setItem('currentIndex', this.num);
         });
         num += 1;
       }
