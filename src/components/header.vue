@@ -7,12 +7,15 @@
             <p class="text">尊敬的寄售商</p>
             <p class="userName">张小明_liu82828</p>
         </div>
-        <el-row :gutter="12">
-            <el-col :sm="4">
-
+        <el-row>
+            <el-col class="fr search" :sm="8">
+                 <el-input
+                    placeholder="请输入内容"
+                    prefix-icon="el-icon-search">
+                </el-input>
             </el-col>
         </el-row>
-    </div>
+    </div> 
 </template>
 <script>
 export default {
@@ -26,6 +29,7 @@ export default {
         font-family: PingFangSC-Semibold;
         color: #34344c;
         position: relative;
+        margin-bottom: 2px;
     }
     .logo {
         margin: 0 27px 0 34px;
@@ -53,7 +57,7 @@ export default {
         }
     }
     .search {
-        width: 600px;
+        line-height: 60px;
         margin-right: 208px;
     }
 </style>
