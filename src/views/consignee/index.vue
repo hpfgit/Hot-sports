@@ -1,54 +1,26 @@
 <template>
-    <div class="home">
+    <div class="consignee">
         <div class="tabel_title">
             <el-row>
-                <el-col :sm="2">主图</el-col>
-                <el-col :sm="6">名称</el-col>
-                <el-col :sm="4">颜色名称</el-col>
-                <el-col :sm="2">寄售商</el-col>
-                <el-col :sm="3">在售端口(个)</el-col>
-                <el-col :sm="4">价格变更记录</el-col>
-                <el-col :sm="3">修改价格</el-col>
+                <el-col :sm="2">备注名称</el-col>
+                <el-col :sm="6">手机号</el-col>
+                <el-col :sm="4">可管理商品数量(个)</el-col>
+                <el-col :sm="2">操作</el-col>
             </el-row>
         </div>
         <div class="table_body">
             <el-row class="items">
                 <el-col :sm="2">
-                    <img class="goods_img" src="@/assets/images/logo.png" alt="">
+                    <p class="name">张三</p>
                 </el-col>
                 <el-col :sm="6">
-                    <p class="goods_name">烽火 ADIDAS SUPERSTAR 金标贝壳头 C77154 C77124 C77394 CG7140</p>
+                    <p class="mobile">13729872222</p>
                 </el-col>
                 <el-col :sm="4">
-                    <p class="color_name">C77124烟台YQ仓现货</p>
+                    <p class="goods_num">200</p>
                 </el-col>
                 <el-col :sm="2">
-                    <div class="consignee">
-                        <!-- <div class="has">
-                            <span>张明</span>
-                            <span class="btn">取消</span>
-                        </div> -->
-                        <div class="no_has">
-                            <span class="btn">未分配</span>
-                            <!-- <el-select v-model="value" placeholder="请选择">
-                                <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value">
-                                </el-option>
-                            </el-select> -->
-                        </div>
-                    </div>
-                </el-col>
-                <el-col :sm="3">
-                    <p class="prot" @click="look_shop">5</p>
-                </el-col>
-                <el-col :sm="4">
-                    <p class="look_info" @click="look_info">查看详细</p>
-                </el-col>
-                <el-col :sm="3">
-                    <p class="setting" @click="setting">编辑</p>
+                    <p class="edit">编辑</p>
                 </el-col>
             </el-row>
         </div>
@@ -65,29 +37,7 @@
 export default {
     data() {
         return {
-            value: '',
-            options: [
-                {
-                value: '选项1',
-                label: '黄金糕'
-                },
-                 {
-                value: '选项2',
-                label: '双皮奶'
-                },
-                 {
-                value: '选项3',
-                label: '蚵仔煎'
-                },
-                 {
-                value: '选项4',
-                label: '龙须面'
-                }, 
-                {
-                value: '选项5',
-                label: '北京烤鸭'
-            }
-            ],
+
         }
     },
     methods: {
@@ -112,7 +62,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .home {
+    .consignee {
         width: 100%;
         padding: 20px 208px 0 20px;
         box-sizing: border-box;
