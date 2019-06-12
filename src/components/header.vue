@@ -7,14 +7,17 @@
             <p class="text">尊敬的寄售商</p>
             <p class="userName">张小明_liu82828</p>
         </div>
-        <el-row>
-            <el-col class="fr search" :sm="8">
+        <div class="right fr">
+            <div class="add_goods">
+                <el-button type="primary"><i class="el-icon-plus"></i>新增商品</el-button>
+            </div>
+            <div class="search">
                  <el-input
                     placeholder="请输入内容"
                     prefix-icon="el-icon-search">
                 </el-input>
-            </el-col>
-        </el-row>
+            </div>
+        </div>
     </div> 
 </template>
 <script>
@@ -56,9 +59,21 @@ export default {
             padding-top: 11px;
         }
     }
-    .search {
-        line-height: 60px;
+    .right {
+        display: flex;
+        align-items: center;
         margin-right: 208px;
+        width: 700px;
+        line-height: 60px;
+        .add_goods {
+            margin-right: 30px;
+            i {
+                margin-right: 10px;
+            }
+        }
+        .search {
+            width: 100%;
+        }
     }
 </style>
 

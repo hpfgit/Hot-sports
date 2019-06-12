@@ -1,15 +1,15 @@
 <template>
   <div class="silder">
     <ul ref="silder_ul">
-      <li :class="{'active': (num == 0 && active == true)}">
-        <router-link to="/home">
+       <li :class="{'active': (num == 0 && active == true)}">
+        <router-link to="/consignee">
           <img :src="require('@/assets/images/icon.png')" alt v-if="(num != 0 && active == true)">
           <img
             :src="require('@/assets/images/icon-active.png')"
             alt
             v-if="(num == 0 && active == true)"
           >
-          <span>我的商品</span>
+          <span>寄售商管理</span>
         </router-link>
         <img
           :src="require('@/assets/images/icon-active-right.png')"
@@ -19,16 +19,33 @@
         >
       </li>
       <li :class="{'active': (num == 1 && active == true)}">
+        <router-link to="/home">
+          <img :src="require('@/assets/images/icon.png')" alt v-if="(num != 1 && active == true)">
+          <img
+            :src="require('@/assets/images/icon-active.png')"
+            alt
+            v-if="(num == 1 && active == true)"
+          >
+          <span>我的商品</span>
+        </router-link>
+        <img
+          :src="require('@/assets/images/icon-active-right.png')"
+          alt
+          class="active-img"
+          v-if="(num == 1 && active == true)"
+        >
+      </li>
+      <li :class="{'active': (num == 2 && active == true)}">
         <router-link to="/history">
           <img
             :src="require('@/assets/images/icon2.png')"
             alt
-            v-if="(num != 1 && active == true)"
+            v-if="(num != 2 && active == true)"
           >
           <img
             :src="require('@/assets/images/icon2-active.png')"
             alt
-            v-if="(num == 1 && active == true)"
+            v-if="(num == 2 && active == true)"
           >
           <span>价格变更记录</span>
         </router-link>
@@ -36,7 +53,7 @@
           :src="require('@/assets/images/icon-active-right.png')"
           alt
           class="active-img"
-          v-if="(num == 1 && active == true)"
+          v-if="(num == 2 && active == true)"
         >
       </li>
     </ul>
@@ -93,6 +110,7 @@ export default {
   }
   li {
     position: relative;
+    margin-bottom: 60px;
     .active-img {
       position: absolute;
       right: 0;
@@ -100,9 +118,8 @@ export default {
       bottom: 0;
       margin: auto;
     }
-    &:nth-of-type(1) {
+    &:first-child {
       margin-top: 80px;
-      margin-bottom: 60px;
     }
     &.active {
       a {
