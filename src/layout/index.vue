@@ -17,32 +17,30 @@ import Slider from "@/components/silder";
 
 export default {
     data() {
-        return {
-
-        }
+        return {};
     },
     components: {
         pageHeader,
         Slider
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-    .layout {
-        height: 100%;
-    }
-    .main {
-        height: calc(100% - 121px);
-    }
-    .slider_box {
-        width: 220px;
-        background: #fff;
-        height: 100%;
-    }
-    .centent {
-        width: calc(100% - 220px);
-        min-height: 100%;
-    }
+.layout {
+    height: 100%;
+}
+.main {
+    height: calc(100% - 121px);
+}
+.slider_box {
+    width: 220px;
+    background: #fff;
+    height: 100%;
+}
+.centent {
+    width: calc(100% - 220px);
+    min-height: 100%;
+}
 </style>
 

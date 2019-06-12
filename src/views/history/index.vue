@@ -1,17 +1,12 @@
 <template>
-    <div>
-        历史记录
-    </div>
+    <div>历史记录</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
 
 

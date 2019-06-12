@@ -1,5 +1,7 @@
 import axios from 'axios'
-import { Message } from 'element-ui'
+import {
+  Message
+} from 'element-ui'
 import QS from 'qs'
 // 创建axios实例
 const service = axios.create({
@@ -37,33 +39,33 @@ service.interceptors.response.use(
   }
 )
 // 封装get方法
-function get(url, params){
-    return new Promise((resolve, reject) =>{
-        service.get(url, params).then(res =>{
-            resolve(res.data);
-        }).catch(err =>{
-            reject(err.data);
-        })
-    });
+function get(url, params) {
+  return new Promise((resolve, reject) => {
+    service.get(url, params).then(res => {
+      resolve(res.data);
+    }).catch(err => {
+      reject(err.data);
+    })
+  });
 
 }
 
 // 封装post方法
-function post(url, params){
-    return new Promise((resolve, reject) =>{
-        service.post(url, QS.stringify(params)).then(res =>{
-            resolve(res.data);
-        }).catch(err =>{
-            reject(err.data);
-        })
-          
-    });
+function post(url, params) {
+  return new Promise((resolve, reject) => {
+    service.post(url, QS.stringify(params)).then(res => {
+      resolve(res.data);
+    }).catch(err => {
+      reject(err.data);
+    })
+
+  });
 }
 //向外暴露request 方法
-export function request(method, url, params){
-    if(method == 'GET'){
-        return get(url, params);
-    }else if(method == 'POST'){
-        return post(url, params);
-    }
+export function request(method, url, params) {
+  if (method == 'GET') {
+    return get(url, params);
+  } else if (method == 'POST') {
+    return post(url, params);
+  }
 }

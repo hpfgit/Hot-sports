@@ -34,87 +34,82 @@
                     <p class="advise_price">￥1699</p>
                 </el-col>
                 <el-col :sm="4">
-                    <p class="bid"><input type="text"><span>9</span></p>
+                    <p class="bid">
+                        <input type="text">
+                        <span>9</span>
+                    </p>
                 </el-col>
             </el-row>
         </div>
         <div class="pages">
-            <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="1000">
-            </el-pagination>
+            <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
         </div>
     </div>
 </template>
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {};
     },
     methods: {
-        is_return () {
-            this.$router.back(-1)
+        is_return() {
+            this.$router.back(-1);
         }
     },
-    created() {
-
-    }
-}
+    created() {}
+};
 </script>
 <style lang="scss" scoped>
-    .edit {
+.edit {
+    width: 100%;
+    padding: 20px 208px 0 20px;
+    box-sizing: border-box;
+}
+.return {
+    font-size: 16px;
+    color: #008efc;
+    margin-bottom: 39px;
+    & > div {
+        display: inline-block;
+    }
+    .left_page {
+        cursor: pointer;
+    }
+    .current_page {
+        color: #000000;
+    }
+}
+.tabel_title {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f9f7f7;
+    border: solid 1px #eaedf6;
+    opacity: 0.9;
+    font-size: 14px;
+    color: #111111;
+}
+
+.table_body {
+    font-size: 14px;
+    vertical-align: middle;
+    .items {
         width: 100%;
-        padding: 20px 208px 0 20px;
-        box-sizing: border-box;
-    }
-    .return {
-        font-size: 16px;
-        color: #008efc;
-        margin-bottom: 39px;
-        &>div {
-            display: inline-block;
-        }
-        .left_page {
-            cursor: pointer;
-        }
-        .current_page {
-            color: #000000;
-        }
-    }
-    .tabel_title {
         text-align: center;
-        height: 40px;
-        line-height: 40px;
-        background-color: #f9f7f7;
-        border: solid 1px #eaedf6;
-        opacity: 0.9;
-        font-size: 14px;
-        color: #111111;
-    }
-    
-    .table_body {
-        font-size: 14px;
-        vertical-align: middle;
-        .items {
-            width: 100%;
-            text-align: center;
-            background: #fff;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            padding: 15px 0;
-            height: 80px;
-           .bid {
-               input{
-                   width: 60px;
-                   padding: 5px;
-               }
-           }
+        background: #fff;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        height: 80px;
+        .bid {
+            input {
+                width: 60px;
+                padding: 5px;
+            }
         }
     }
+}
 </style>
 
 
